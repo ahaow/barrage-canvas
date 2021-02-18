@@ -1,0 +1,28 @@
+{
+  "name": "canvas-barrage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/canvas-barrage.cjs.js",
+  "module": "dist/canvas-barrage.esm.js",
+  "browser": "dist/canvas-barrage.umd.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "pretest": "npm run build",
+    "test": "ts-node test/test.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/ms": "^0.7.31",
+    "rollup": "^2.38.5",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "ts-node": "^9.1.1",
+    "tslib": "^2.1.0",
+    "typescript": "^4.1.4"
+  }
+}
