@@ -37,8 +37,8 @@ export class Barrage {
         const defaultBarrageOpt = {
             font: this.font,
             duration: this.duration, // 弹幕屏幕停留时长
-            lineHeight: this.lineHeight,
-            padding: this.padding,
+            lineHeight: this.lineHeight, // 弹幕行高
+            padding: this.padding, // 弹幕区四周留白
             tunnelHeight: this.tunnelHeight,
             tunnelNum: this.tunnelNum,
             tunnelMaxNum: this.tunnelMaxNum, // 隧道最大缓冲长度
