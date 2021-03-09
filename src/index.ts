@@ -26,7 +26,7 @@ export class Barrage {
     public canvas: HTMLCanvasElement = null
     public width: number = 0
     public height: number = 0
-    public fontSize: string = ""
+    public fontSize: number = 14
     public ctx: CanvasRenderingContext2D = null
     public availableHeight: number = 0
     public _isActive: boolean = false
@@ -82,7 +82,7 @@ export class Barrage {
     init(opt: any = {}) {
         this.width = opt.width
         this.height = opt.height
-        this.fontSize = String(getFontSize(this.font))
+        this.fontSize = Number(getFontSize(this.font))
         this.innerDuration = this.transfromDuration2Canvas(this.duration)
 
         // const ratio = this.ratio// 设备像素比
@@ -162,7 +162,7 @@ export class Barrage {
         }
 
         this.font = String(font)
-        this.fontSize = String(getFontSize(this.font))
+        this.fontSize = Number(getFontSize(this.font))
         this.ctx.font = this.font
     }
 
@@ -275,6 +275,7 @@ export class Barrage {
         const distance = this.mode === 'overlap' ? this.width + textWidth : this.width
         opt.textWidth = textWidth
         opt.speed = distance / (this.innerDuration * this.fps)
+        opt.font = this.font;
         opt.fontSize = this.fontSize
         opt.x = this.width
         opt.y = this.tunnelHeight * (opt.tunnelId + 0.5) + this.padding[0]
