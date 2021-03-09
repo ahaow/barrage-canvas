@@ -25,10 +25,10 @@ barrage.send({
 
 ## 配置
 
-```json
+```js
 {
 	font: "14px sans-serif", // 字体
-    fontSize: 14,
+  fontSize: 14,
 	duration: 15, // 弹幕屏幕停留时长
 	lineHeight: 1.2, // 弹幕行高
 	padding: [0, 0, 0, 0], // 弹幕区四周留白
@@ -44,7 +44,7 @@ barrage.send({
 
 ## 弹幕配置数据
 
-```json
+```js
 {
   color: "#ffffff",
   content: "hello world"
